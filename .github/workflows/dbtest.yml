@@ -1,0 +1,17 @@
+#一般リポジトリ用ビルドテスト
+name: "Setup PostgreSQL"
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Docker
+      uses: harmon758/postgresql-action@v1
+      with:
+        postgresql version: '11'
+    - name: Build
+      run: |
+        yarn build:all
