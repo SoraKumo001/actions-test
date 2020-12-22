@@ -5,14 +5,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: ls
-        run: |
-          pwd
-          cd ~
-          pwd
-          ls -la
-          cat .bash_profile
       - name: Create env
         run: echo export TEST=ABC >> ~/.bash_profile
       - name: echo
-        run: echo $TEST
+        run: |
+          cat ~/.bash_profile
+          export
