@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Create env
         run: | 
-          echo export TEST=ABC >> ~/.bash_profile
+          echo export TEST=ABC >> ~/.profile
           TEST2=ABC
           export TEST3=ABC
       - name: echo
         run: |
-          cat ~/.bash_profile
+          cat ~/.profile
           env
