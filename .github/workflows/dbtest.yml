@@ -10,4 +10,4 @@ jobs:
       - name: echo
         run: |
           cat ~/.bash_profile
-          export
+          env
